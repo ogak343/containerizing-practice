@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: containerizing-practice
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+      default_schema: public
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://127.0.0.1:5432/postgres
+    # Reminder: if db is also running on docker container on the same virtual machine,
+    # use container name instead of IpAddress like 127.0.0.1 -> ${container name}
+    username: postgres
+    password: slark343
+    hikari:
+      driver-class-name: org.postgresql.Driver
